@@ -24,6 +24,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
+	font-family: 'Staatliches', serif;
 	line-height: 1;
 }
 ol, ul {
@@ -59,9 +60,15 @@ a{
 	margin: 0 auto;
 }
 
+.container:after {
+	content: "";
+	display: table; 
+	clear: both;
+}
+
 .header, .footer {
-	background: #333333 url(../images/bg-texture1.jpg) repeat;
-	color: #fff;
+	background: #ffffff url(../images/bg-texture1.jpg) repeat;
+	color: #d0d0d0;
 }
 
 .middle {
@@ -72,4 +79,34 @@ a{
 	background: #d0d0d0 url(../images/bg-scout.jpg) no-repeat 50% 50%;
     background-size: cover;
     height: 102px;
+}
+
+.logo {
+	float: left;
+	margin-top: 45px;
+	margin-bottom: 39px; 
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.nav {
+	float: right;
+}
+
+.nav li {
+	float: left;
+}
+
+.nav a{
+	display: block; 
+	line-height: 130px; 
+	padding-top: 15px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+	padding-right: 0px;
+	color: #666666;
+}
+
+.nav a:hover {
+	color: #000000;
 }
