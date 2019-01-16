@@ -17,6 +17,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -26,38 +27,21 @@ footer, header, hgroup, menu, nav, section {
 body {
 	font-family: 'Staatliches', serif;
 	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-html {
-	box-sizing: border-box;
-}
-
-*, *:before, *:after {
-	box-sizing: inherit;
+	width: 960px;
 }
 
 a{
 	text-decoration: none; 
 }
-
+/*
 .container {
-	width: 900px;
+	
+	width: 1440px;
 	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	
+
 }
 
 .container:after {
@@ -69,6 +53,7 @@ a{
 .header, .footer {
 	background: #ffffff url(../images/bg-texture1.jpg) repeat;
 	color: #d0d0d0;
+
 }
 
 .middle {
@@ -83,30 +68,204 @@ a{
 
 .logo {
 	float: left;
-	margin-top: 45px;
-	margin-bottom: 39px; 
-	margin-right: 0;
-	margin-left: 0;
+	
+	display: flex;
+	border-style: solid;
+	border-width: 5px;
 }
 
 .nav {
 	float: right;
+	margin-top: 0;
+
 }
 
 .nav li {
-	float: left;
+	display: flex;
+	list-style: none;
 }
 
+li {
+	list-style: none; 
+	display: flex; 
+}
+
+
+
 .nav a{
-	display: block; 
-	line-height: 130px; 
-	padding-top: 15px;
+	
+	border-style: solid;
+	border-width: 5px;
+	line-height: 10px; 
+	/*padding-top: 15px;
 	padding-bottom: 10px;
 	padding-left: 15px;
 	padding-right: 0px;
 	color: #666666;
+	/*font-size: 16px;
+	margin-right: 15px;
+	margin-top: 40px;
+	padding: 27px 6px;
+	margin: 0 auto;
+	font-size: 16px;
 }
 
 .nav a:hover {
 	color: #000000;
+}
+
+.nav a:after {
+	content: '';
+
+}*/
+
+.container { 
+width: 90%;
+ 	
+ 	display: flex;
+ 	justify-content: space-between;
+
+ }
+
+ .container a{
+ 	color: #666666;
+ 	font-size:18px;
+ 	padding: 20px 8px;
+ 	margin-right: 23px;
+
+ }
+
+ /*.container:after {
+	content: "";
+	display: table; 
+	clear: both;
+}*/
+
+.container a:hover {
+	color: #000;
+}
+
+ .nav {
+ 	display: flex;
+ 	list-style-type: none;
+ 	 	height: 130px;
+ 	 	margin: 72px 50px 38px 30px;
+}
+
+.logo { 
+	margin: 45px 30px 40px 40px;
+	display: flex;
+ }
+
+ .scout {
+ 	
+ 	background-color: #ebebea;
+}
+ 
+ .scout_container h2{
+ 	font-size: 24px;
+ 	text-align: center;
+ 	padding: 25px 125px;
+ 	
+ }
+
+ 
+
+
+
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
 }
